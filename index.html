@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Emprendedor — Tienda de cursos digitales</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="description" content="Campus Emprendedor: la tienda de cursos digitales para empezar a generar un ingreso extra desde casa. Acceso inmediato, 100% en español.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Campus Emprendedor — Tienda de cursos digitales">
+<meta property="og:description" content="Cursos digitales paso a paso para generar un ingreso extra desde casa. Acceso inmediato, 100% en español.">
+<meta property="og:url" content="https://campusemprendedor.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Campus Emprendedor — Tienda de cursos digitales">
+<meta name="twitter:description" content="Cursos digitales paso a paso para generar un ingreso extra desde casa.">
+<style>
+:root{
+--gold:#c9a24a;
+--gold-dark:#9c7a2e;
+--gold-light:#f4e6c1;
+--ink:#241a0f;
+--ink-soft:#5a4d3c;
+--cream:#fbf6ec;
+--cream-alt:#f4ecd8;
+--card:#ffffff;
+--green:#1f8a4c;
+--gray:#8a7d68;
+--cta:#c9a24a;
+--cta-dark:#9c7a2e;
+--radius:18px;
+--shadow:0 12px 34px rgba(36,26,15,.12);
+--border:1px solid #ecdfc0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+font-family:'Segoe UI',Arial,Helvetica,sans-serif;
+background:var(--cream);
+color:var(--ink);
+line-height:1.6;
+-webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block;}
+.container{max-width:1120px;margin:0 auto;padding:0 22px;}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+.ce-logo{
+background-image:url("/img/logo.jpg");
+background-size:cover;
+background-position:center;
+border-radius:50%;
+flex-shrink:0;
+}
+/* ---------- Botones ---------- */
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:50px;
+font-weight:700;
+font-size:.98rem;
+text-align:center;
+cursor:pointer;
+border:none;
+transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn-primary{
+background:linear-gradient(135deg,var(--cta),var(--cta-dark));
+color:#fff;
+box-shadow:0 10px 24px rgba(156,122,46,.35);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(156,122,46,.45);}
+.btn-outline{
+background:transparent;
+color:var(--gold-dark);
+border:1.5px solid var(--gold-dark);
+}
+.btn-outline:hover{background:var(--gold-light);}
+.btn-disabled{
+background:#efe6cf;
+color:var(--gray);
+cursor:not-allowed;
+}
+/* ---------- Header ---------- */
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(251,246,236,.94);
+backdrop-filter:blur(8px);
+border-bottom:var(--border);
+padding:14px 0;
+}
+header .container{display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .ce-logo{width:44px;height:44px;box-shadow:0 2px 8px rgba(36,26,15,.25);}
+.brand-name{font-family:Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--ink);letter-spacing:.2px;}
+.brand-name small{display:block;font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:.68rem;color:var(--gold-dark);letter-spacing:1.5px;text-transform:uppercase;}
+nav.top-links{display:flex;align-items:center;gap:22px;}
+nav.top-links a.navlink{font-size:.88rem;font-weight:600;color:var(--ink-soft);}
+nav.top-links a.navlink:hover{color:var(--gold-dark);}
+/* ---------- Hero ---------- */
+.hero{
+background:radial-gradient(circle at 80% 0%, var(--gold-light) 0%, var(--cream) 55%);
+padding:76px 0 64px;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+.hero-emblem{
+width:120px;height:120px;margin:0 auto 22px;
+box-shadow:0 8px 26px rgba(36,26,15,.25);
+border:3px solid #fff;
+}
+.badge{
+display:inline-block;background:var(--gold-light);color:var(--gold-dark);
+font-size:.76rem;font-weight:700;padding:7px 16px;border-radius:30px;margin-bottom:20px;
+letter-spacing:.4px;text-transform:uppercase;
+}
+.hero h1{font-size:2.7rem;color:var(--ink);margin:0 auto 18px;max-width:780px;}
+.hero h1 span{color:var(--gold-dark);}
+.hero p.sub{font-size:1.15rem;color:var(--ink-soft);margin:0 auto 32px;max-width:600px;}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.hero-stats{
+display:flex;justify-content:center;gap:46px;margin-top:52px;flex-wrap:wrap;
+}
+.hero-stats div{text-align:center;}
+.hero-stats strong{display:block;font-family:Georgia,serif;font-size:1.6rem;color:var(--ink);}
+.hero-stats span{font-size:.8rem;color:var(--gray);letter-spacing:.3px;}
+/* ---------- Secciones ---------- */
+section{padding:66px 0;}
+.section-alt{background:var(--cream-alt);}
+h2.section-title{
+font-size:2.1rem;text-align:center;color:var(--ink);margin-bottom:14px;
+}
+p.section-sub{text-align:center;color:var(--gray);max-width:640px;margin:0 auto 44px;font-size:1.05rem;}
+/* ---------- Tienda / catálogo ---------- */
+.courses-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:30px;
+}
+.course-card{
+background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+display:flex;flex-direction:column;border:var(--border);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+.course-card.available:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(36,26,15,.18);}
+.course-card .thumb{
+width:100%;height:190px;object-fit:cover;background:var(--gold-light);
+}
+.course-card .thumb-placeholder{
+width:100%;height:190px;display:flex;align-items:center;justify-content:center;
+background:var(--gold-light);font-size:2.6rem;color:var(--gold-dark);
+}
+.course-card-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.course-card-body h3{font-size:1.25rem;color:var(--ink);}
+.course-card-body p{color:var(--gray);font-size:.92rem;flex:1;}
+.course-tag{
+display:inline-block;font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;
+letter-spacing:.4px;align-self:flex-start;text-transform:uppercase;
+}
+.tag-live{background:#e5f6ec;color:var(--green);}
+.tag-soon{background:#f1e9d4;color:var(--gray);}
+.course-price{font-weight:700;color:var(--ink);font-size:1.05rem;}
+.course-price .old{color:var(--gray);text-decoration:line-through;font-weight:400;font-size:.85rem;margin-right:8px;}
+.course-card-body .btn{margin-top:6px;width:100%;}
+/* ---------- Por qué Campus Emprendedor ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;}
+.why-item{
+background:var(--card);border-radius:var(--radius);padding:26px;text-align:center;
+border:var(--border);box-shadow:var(--shadow);
+}
+.why-item .icon{font-size:2rem;margin-bottom:12px;}
+.why-item h3{font-size:1.05rem;margin-bottom:8px;color:var(--ink);}
+.why-item p{color:var(--gray);font-size:.9rem;}
+/* ---------- CTA final ---------- */
+.cta-final{
+background:linear-gradient(135deg,var(--ink) 0%, #3a2c18 100%);
+color:#fff;text-align:center;border-radius:var(--radius);
+padding:56px 30px;margin:0 auto;max-width:900px;
+}
+.cta-final h2{color:#fff;margin-bottom:14px;font-size:1.9rem;}
+.cta-final p{color:#e6dcc4;max-width:520px;margin:0 auto 28px;}
+/* ---------- Footer ---------- */
+footer{
+padding:44px 0 30px;text-align:center;color:var(--gray);font-size:.85rem;
+border-top:var(--border);
+}
+footer .brand{justify-content:center;margin-bottom:14px;}
+footer .brand .ce-logo{width:34px;height:34px;}
+footer .brand-name{font-size:1rem;}
+footer p{margin-bottom:6px;}
+footer .foot-links{display:flex;gap:18px;justify-content:center;margin-top:12px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--ink-soft);font-weight:600;}
+footer .foot-links a:hover{color:var(--gold-dark);}
+@media (max-width:600px){
+.hero h1{font-size:2.1rem;}
+nav.top-links{display:none;}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="brand">
+<div class="ce-logo"></div>
+<div class="brand-name">Campus Emprendedor<small>Tienda de cursos</small></div>
+</div>
+<nav class="top-links">
+<a href="#tienda" class="navlink">Cursos</a>
+<a href="#por-que" class="navlink">Por qué elegirnos</a>
+</nav>
+<a href="#tienda" class="btn btn-primary">Ver cursos</a>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="ce-logo hero-emblem"></div>
+<span class="badge">Cursos digitales · 100% en español</span>
+<h1>Tu <span>tienda de cursos</span> para generar un ingreso extra desde casa</h1>
+<p class="sub">Campus Emprendedor reúne cursos prácticos y accionables, pensados para quien nunca vendió nada antes. Comprás, accedés al instante y empezás hoy.</p>
+<div class="hero-ctas">
+<a href="#tienda" class="btn btn-primary">Explorar cursos</a>
+<a href="#por-que" class="btn btn-outline">Por qué elegirnos</a>
+</div>
+<div class="hero-stats">
+<div><strong id="statCursos">1</strong><span>Curso publicado</span></div>
+<div><strong>100%</strong><span>Acceso digital</span></div>
+<div><strong>+1.200</strong><span>Alumnos en la comunidad</span></div>
+</div>
+</div>
+</section>
+<!-- TIENDA -->
+<section id="tienda">
+<div class="container">
+<h2 class="section-title">Nuestros cursos</h2>
+<p class="section-sub">Elegí un curso y arrancá ahora mismo. Cada uno incluye material descargable y acceso a tu cuenta apenas se confirma el pago.</p>
+<div class="courses-grid" id="coursesGrid"></div>
+</div>
+</section>
+<!-- POR QUÉ -->
+<section id="por-que" class="section-alt">
+<div class="container">
+<h2 class="section-title">Por qué elegir Campus Emprendedor</h2>
+<p class="section-sub">Cada curso de la tienda sigue los mismos estándares, así sabés qué esperar antes de comprar.</p>
+<div class="why-grid">
+<div class="why-item">
+<div class="icon">⚡</div>
+<h3>Acceso inmediato</h3>
+<p>Apenas se confirma el pago, entrás a tu cuenta y descargás todo el material.</p>
+</div>
+<div class="why-item">
+<div class="icon">🧭</div>
+<h3>Paso a paso</h3>
+<p>Contenido pensado para arrancar de cero, sin conocimientos previos.</p>
+</div>
+<div class="why-item">
+<div class="icon">🔒</div>
+<h3>Pago seguro</h3>
+<p>Comprás con la misma confianza que en cualquier tienda online reconocida.</p>
+</div>
+<div class="why-item">
+<div class="icon">🇦🇷</div>
+<h3>100% en español</h3>
+<p>Todo el contenido está pensado y escrito en español, sin traducciones.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section>
+<div class="container">
+<div class="cta-final">
+<h2>Elegí tu curso y arrancá hoy</h2>
+<p>Nuevos cursos se suman todo el tiempo a la tienda de Campus Emprendedor.</p>
+<a href="#tienda" class="btn btn-primary">Ver cursos disponibles</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="brand">
+<div class="ce-logo"></div>
+<div class="brand-name">Campus Emprendedor</div>
+</div>
+<p>Campus Emprendedor reúne cursos digitales educativos. Los resultados dependen del esfuerzo y las condiciones de cada persona.</p>
+<p>© 2026 Campus Emprendedor. Todos los derechos reservados.</p>
+<div class="foot-links">
+<a href="#tienda">Cursos</a>
+<a href="#por-que">Por qué elegirnos</a>
+</div>
+</div>
+</footer>
+<script>
+/* ---------------------------------------------------------------
+CATÁLOGO DE CURSOS
+Para sumar un curso nuevo, agregá un objeto al array de abajo.
+- id:      identificador corto (no se usa aún, sirve de referencia)
+- emoji:   ícono si todavía no hay imagen del curso
+- img:     ruta a la imagen de portada (ej: "/Postres-de-Oro/og-image.jpg")
+- title:   nombre del curso, con emoji si querés
+- desc:    descripción corta (1-2 líneas)
+- tag:     "live" (disponible) o "soon" (próximamente)
+- link:    URL del curso (ruta del repo, ej: "/Postres-de-Oro/")
+- priceNow / priceOld: opcional, para mostrar precio
+--------------------------------------------------------------- */
+const cursos = [
+{
+id: "postres-de-oro",
+img: "/Postres-de-Oro/og-image.jpg",
+title: "🍰 Postres de Oro",
+desc: "32 recetas de postres fáciles y rentables para vender desde casa, con guía de precios y bonos de regalo.",
+tag: "live",
+link: "/Postres-de-Oro/",
+priceNow: "$17.999 ARS",
+priceOld: "$45.500 ARS"
+},
+{
+id: "proximo-curso",
+emoji: "🚀",
+title: "Nuevo curso en camino",
+desc: "Estamos preparando el próximo curso de Campus Emprendedor. Muy pronto vas a poder verlo acá.",
+tag: "soon",
+link: null
+}
+];
+const grid = document.getElementById("coursesGrid");
+cursos.forEach(curso => {
+const isLive = curso.tag === "live";
+const card = document.createElement("div");
+card.className = "course-card" + (isLive ? " available" : "");
+const media = curso.img
+? `<img class="thumb" src="${curso.img}" alt="${curso.title}">`
+: `<div class="thumb-placeholder">${curso.emoji || "📚"}</div>`;
+const tagHtml = isLive
+? `<span class="course-tag tag-live">Disponible</span>`
+: `<span class="course-tag tag-soon">Próximamente</span>`;
+const priceHtml = (isLive && curso.priceNow)
+? `<div class="course-price">${curso.priceOld ? `<span class="old">${curso.priceOld}</span>` : ""}${curso.priceNow}</div>`
+: "";
+const ctaHtml = isLive
+? `<a href="${curso.link}" class="btn btn-primary">Ver curso</a>`
+: `<span class="btn btn-disabled">Disponible pronto</span>`;
+card.innerHTML = `
+${media}
+<div class="course-card-body">
+${tagHtml}
+<h3>${curso.title}</h3>
+<p>${curso.desc}</p>
+${priceHtml}
+${ctaHtml}
+</div>
+`;
+grid.appendChild(card);
+});
+document.getElementById("statCursos").textContent =
+cursos.filter(c => c.tag === "live").length;
+</script>
+</body>
+</html>
